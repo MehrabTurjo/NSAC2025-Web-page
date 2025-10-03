@@ -13,37 +13,48 @@
   <body>
     <header class="navbar">
       <div class="container nav-inner">
-        <a href="index.html#hero" class="logo">dream<span>2050</span></a>
+        <a href="index.html#hero" class="logo" aria-label="Dream 2050 home">dream<span>2050</span></a>
         <nav class="nav" aria-label="Primary">
           <ul class="nav-links">
-            <li><a href="index.html#explore">Explore Dream2050</a></li>
+            <li><a href="index.html#mission">Mission</a></li>
+            <li><a href="index.html#explore">Explore</a></li>
+            <li><a href="index.html#technology">Technology</a></li>
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </nav>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
     <main>
-      <section id="hero" class="hero section" aria-labelledby="exp-title">
+      <section id="hero" class="hero" aria-labelledby="exp-title">
         <div class="hero-media" role="img" aria-label="International Space Station in orbit">
-          <img src="assets/iss-png--896.png" alt="The International Space Station orbiting above Earth" loading="eager" />
+          <picture>
+            <img src="assets/iss-png--896.png" alt="The International Space Station orbiting above Earth" loading="eager" />
+          </picture>
         </div>
-        <div class="hero-content container" style="text-align:center;">
-          <h1 id="exp-title" class="title-mono title-page">Experience ISS</h1>
-          <p class="section-lead" style="margin-top:8px;">
-            Step into an International Space Station simulation built to showcase systems, science operations,
-            and daily life in orbit. This preview highlights core interactions and the overall look and feel.
+        <div class="hero-stars"></div>
+        <div class="hero-content container">
+          <div class="hero-badge">Virtual Reality Experience</div>
+          <h1 id="exp-title" class="title-mono">Experience ISS</h1>
+          <p class="subtitle">International Space Station Simulation</p>
+          <p class="hero-description">
+            Step into an International Space Station simulation built to showcase systems, science operations, and daily life in orbit. This preview highlights core interactions and the overall look and feel.
           </p>
-          <div class="video-frame" style="margin-top:18px;">
-            <video id="demo-video" controls preload="metadata" style="width:100%; max-width:960px; border-radius:12px; border:1px solid var(--border); background:#000; box-shadow: var(--shadow);">
-              <source src="assets/ISS.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div style="margin-top:14px;">
-            <a class="cta primary" href="#" download>Download and try it yourself</a>
+          <div class="demo-section">
+            <div class="video-frame">
+              <video id="demo-video" controls preload="metadata" class="demo-video">
+                <source src="assets/ISS.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="hero-ctas">
+              <a class="cta primary" href="https://github.com/MehrabTurjo/team-titan-dream2050/" target="_blank" rel="noopener">Download Experience</a>
+              <a class="cta secondary hero-cta-alt" href="index.html#explore">Back to Explore</a>
+            </div>
           </div>
           <aside class="disclaimer" role="note" aria-label="Disclaimer">
             <div class="disclaimer-inner">
@@ -56,10 +67,10 @@
       </section>
 
 
-      <section class="section" aria-labelledby="credits-title">
+      <section class="section credits-section" aria-labelledby="credits-title">
         <div class="container">
-          <h2 id="credits-title">Credits</h2>
-          <p class="section-lead" style="margin-top:8px; max-width:920px; margin-left:auto; margin-right:auto;">
+          <h2 id="credits-title">Credits & Resources</h2>
+          <p class="section-lead">
             Dream2050 is a concept and demonstration project created for the NASA Space Apps Challenge 2025. The demo highlights station systems, science operations, and crew workflows—compiled from public-domain resources, open-source tooling, and team contributions.
           </p>
 
@@ -93,7 +104,36 @@
 
     <footer class="footer">
       <div class="container">
-        <p>© <span id="year"></span> Dream2050</p>
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>Dream2050</h3>
+            <p>Pioneering the future of space exploration through immersive simulation and AI-assisted orbital operations.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="experience-iss.html">ISS Simulation</a></li>
+                <li><a href="explore-ai-astrobot.html">AI Astrobot</a></li>
+                <li><a href="index.html#technology">Technology</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Mission</h4>
+              <ul>
+                <li><a href="index.html#about">About Project</a></li>
+                <li><a href="index.html#contact">Team</a></li>
+                <li><a href="https://www.spaceappschallenge.org/" target="_blank" rel="noopener">NASA Space Apps</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Dream2050 · Built for NASA Space Apps Challenge 2025 · Team Titan</p>
+          <div class="footer-social">
+            <span>🚀 ISS Virtual Experience</span>
+          </div>
+        </div>
       </div>
     </footer>
 

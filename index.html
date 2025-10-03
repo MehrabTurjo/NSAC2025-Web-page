@@ -19,7 +19,9 @@
         <a href="#hero" class="logo" aria-label="Dream 2050 home">dream<span>2050</span></a>
         <nav class="nav" aria-label="Primary">
           <ul class="nav-links">
-            <li><a href="#explore">Explore Dream2050</a></li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#technology">Technology</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -39,12 +41,54 @@
             <img src="assets/iss-png--896.png" alt="The International Space Station orbiting above Earth" loading="eager" />
           </picture>
         </div>
+        <div class="hero-stars"></div>
         <div class="hero-content container">
+          <div class="hero-badge">NASA Space Apps Challenge 2025</div>
           <h1 class="title-mono">Dream 2050</h1>
           <p class="subtitle">International Space Station Simulation</p>
-          <a href="#explore" class="cta primary">Start Exploring</a>
+          <p class="hero-description">
+            Experience the future of space exploration through immersive simulation, advanced AI assistance, 
+            and cutting-edge orbital laboratory operations in the year 2050.
+          </p>
+          <div class="hero-ctas">
+            <a href="#mission" class="cta primary">Discover Mission</a>
+            <a href="#explore" class="cta secondary hero-cta-alt">Start Exploring</a>
+          </div>
         </div>
         <div class="hero-gradient"></div>
+        <div class="hero-scroll-indicator">
+          <div class="scroll-text">Scroll to explore</div>
+          <div class="scroll-arrow">↓</div>
+        </div>
+      </section>
+
+      <!-- Mission Overview -->
+      <section id="mission" class="section mission-section" aria-labelledby="mission-title">
+        <div class="container">
+          <h2 id="mission-title" class="section-title-center">Mission: Dream 2050</h2>
+          <p class="section-lead">
+            Experience the future of space exploration through our comprehensive simulation of the International Space Station in 2050. 
+            Advanced life support systems, cutting-edge research facilities, and AI-assisted operations create an unprecedented orbital laboratory.
+          </p>
+          <div class="mission-stats">
+            <div class="stat-item reveal-item">
+              <div class="stat-number">365</div>
+              <div class="stat-label">Days in Orbit</div>
+            </div>
+            <div class="stat-item reveal-item">
+              <div class="stat-number">2050</div>
+              <div class="stat-label">Target Year</div>
+            </div>
+            <div class="stat-item reveal-item">
+              <div class="stat-number">6</div>
+              <div class="stat-label">Crew Members</div>
+            </div>
+            <div class="stat-item reveal-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Experiments</div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Explore -->
@@ -55,9 +99,52 @@
             Step into an immersive, data-informed simulation of life aboard the International Space Station in the year 2050. 
             Navigate modules, manage resources, run experiments, and collaborate with AI crewmates to keep the station thriving.
           </p>
-          <div class="cta-group">
-            <a href="experience-iss.html" id="cta-iss" class="cta secondary">Explore ISS Simulation</a>
-            <a href="explore-ai-astrobot.html" id="cta-astrobot" class="cta secondary">Explore AI Astrobot</a>
+          <div class="explore-features">
+            <div class="feature-card reveal-item">
+              <div class="feature-icon">🚀</div>
+              <h3>ISS Simulation</h3>
+              <p>Experience life aboard the International Space Station with realistic systems, daily operations, and scientific research.</p>
+              <a href="experience-iss.html" class="feature-link">Launch Simulation →</a>
+            </div>
+            <div class="feature-card reveal-item">
+              <div class="feature-icon">🤖</div>
+              <h3>AI Astrobot</h3>
+              <p>Interact with advanced AI crew members designed to assist with mission planning, system monitoring, and problem-solving.</p>
+              <a href="explore-ai-astrobot.html" class="feature-link">Meet Astrobot →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology & Innovation -->
+      <section id="technology" class="section tech-section" aria-labelledby="tech-title">
+        <div class="container">
+          <h2 id="tech-title" class="section-title-center">Advanced Space Technology</h2>
+          <p class="section-lead">
+            Discover the revolutionary technologies that make Dream2050 possible, from advanced life support systems to 
+            next-generation solar arrays and autonomous docking capabilities.
+          </p>
+          <div class="tech-grid">
+            <div class="tech-item reveal-item">
+              <div class="tech-number">01</div>
+              <h3>Life Support 3.0</h3>
+              <p>Revolutionary atmospheric processing with 99.9% efficiency, advanced water recycling, and autonomous environmental control systems.</p>
+            </div>
+            <div class="tech-item reveal-item">
+              <div class="tech-number">02</div>
+              <h3>Neural Interface</h3>
+              <p>Direct brain-computer interfaces for enhanced control of station systems and seamless human-AI collaboration.</p>
+            </div>
+            <div class="tech-item reveal-item">
+              <div class="tech-number">03</div>
+              <h3>Quantum Computing</h3>
+              <p>On-board quantum processors for complex calculations, real-time data analysis, and advanced simulations.</p>
+            </div>
+            <div class="tech-item reveal-item">
+              <div class="tech-number">04</div>
+              <h3>Zero-G Manufacturing</h3>
+              <p>3D printing and molecular assembly in microgravity for creating materials impossible to produce on Earth.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -175,7 +262,36 @@
 
     <footer class="footer">
       <div class="container">
-        <p>© <span id="year"></span> Dream2050 · Built for NASA Space Apps 2025</p>
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>Dream2050</h3>
+            <p>Pioneering the future of space exploration through immersive simulation and AI-assisted orbital operations.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="experience-iss.html">ISS Simulation</a></li>
+                <li><a href="explore-ai-astrobot.html">AI Astrobot</a></li>
+                <li><a href="#technology">Technology</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Mission</h4>
+              <ul>
+                <li><a href="#about">About Project</a></li>
+                <li><a href="#contact">Team</a></li>
+                <li><a href="https://www.spaceappschallenge.org/" target="_blank" rel="noopener">NASA Space Apps</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Dream2050 · Built for NASA Space Apps Challenge 2025 · Team Titan</p>
+          <div class="footer-social">
+            <span>🚀 Reaching for the stars</span>
+          </div>
+        </div>
       </div>
     </footer>
 
