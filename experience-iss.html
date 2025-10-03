@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experience ISS · Dream2050</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html#hero" class="logo">dream<span>2050</span></a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="index.html#explore">Explore Dream2050</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="exp-title">
+        <div class="container" style="text-align:center;">
+          <h1 id="exp-title" class="title-mono title-page">Experience ISS</h1>
+          <p class="section-lead" style="margin-top:8px;">
+            Step into an International Space Station simulation built to showcase systems, science operations,
+            and daily life in orbit. This preview highlights core interactions and the overall look and feel.
+          </p>
+          <div class="video-frame" style="margin-top:18px;">
+            <video id="demo-video" controls preload="metadata" style="width:100%; max-width:960px; border-radius:12px; border:1px solid var(--border); background:#000; box-shadow: var(--shadow);">
+              <source src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div style="margin-top:14px;">
+            <a class="cta primary" href="#" download>Download and try it yourself</a>
+          </div>
+          <p class="section-lead" style="max-width:960px; margin:12px auto 0 auto; font-size:0.95rem;">
+            <strong>Disclaimer:</strong> Due to resource limitations, Lunar Trek Unreal Engine 5 Virtual Experience could not be deployed to a web server. Executable files are available for download at this link. Due to security concerns with downloading files, the above videos are provided as demonstrations.
+          </p>
+        </div>
+      </section>
+
+
+      <section class="section" aria-label="Credits">
+        <div class="container">
+          <h2>Credits</h2>
+          <ul class="feature-list" style="margin-top:8px;">
+            <li>NASA imagery and public domain assets</li>
+            <li>Unreal Engine 5 tooling</li>
+            <li>Open-source UI icons and fonts</li>
+            <li>Team Dream2050 contributions</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Dream2050</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
