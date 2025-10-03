@@ -84,6 +84,10 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  // telemetry removed
+
+  // Hero parallax/mouse-tracking removed per request (no motion)
+
   // Remove old contact form handler (no longer needed)
 
   // CTA click placeholders

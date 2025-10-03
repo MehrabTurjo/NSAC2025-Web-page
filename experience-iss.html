@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Experience ISS · Dream2050</title>
+    <title>Experience ISS | Team Titan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="design-system.css" />
   </head>
   <body>
     <header class="navbar">
@@ -25,8 +26,11 @@
     </header>
 
     <main>
-      <section class="section" aria-labelledby="exp-title">
-        <div class="container" style="text-align:center;">
+      <section id="hero" class="hero section" aria-labelledby="exp-title">
+        <div class="hero-media" role="img" aria-label="International Space Station in orbit">
+          <img src="assets/iss-png--896.png" alt="The International Space Station orbiting above Earth" loading="eager" />
+        </div>
+        <div class="hero-content container" style="text-align:center;">
           <h1 id="exp-title" class="title-mono title-page">Experience ISS</h1>
           <p class="section-lead" style="margin-top:8px;">
             Step into an International Space Station simulation built to showcase systems, science operations,
@@ -34,29 +38,55 @@
           </p>
           <div class="video-frame" style="margin-top:18px;">
             <video id="demo-video" controls preload="metadata" style="width:100%; max-width:960px; border-radius:12px; border:1px solid var(--border); background:#000; box-shadow: var(--shadow);">
-              <source src="" type="video/mp4" />
+              <source src="assets/ISS.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <div style="margin-top:14px;">
             <a class="cta primary" href="#" download>Download and try it yourself</a>
           </div>
-          <p class="section-lead" style="max-width:960px; margin:12px auto 0 auto; font-size:0.95rem;">
-            <strong>Disclaimer:</strong> Due to resource limitations, Lunar Trek Unreal Engine 5 Virtual Experience could not be deployed to a web server. Executable files are available for download at this link. Due to security concerns with downloading files, the above videos are provided as demonstrations.
-          </p>
+          <aside class="disclaimer" role="note" aria-label="Disclaimer">
+            <div class="disclaimer-inner">
+              <svg class="disclaimer-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M11 9h2v6h-2zM11 17h2v2h-2z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="currentColor" opacity="0.08"/></svg>
+              <p class="disclaimer-text"><strong>Disclaimer:</strong> Due to resource limitations, Lunar Trek Unreal Engine 5 Virtual Experience could not be deployed to a web server. Executable files are available for download at this link. Due to security concerns with downloading files, the above videos are provided as demonstrations.</p>
+            </div>
+          </aside>
         </div>
+          <div class="hero-gradient"></div>
       </section>
 
 
-      <section class="section" aria-label="Credits">
+      <section class="section" aria-labelledby="credits-title">
         <div class="container">
-          <h2>Credits</h2>
-          <ul class="feature-list" style="margin-top:8px;">
-            <li>NASA imagery and public domain assets</li>
-            <li>Unreal Engine 5 tooling</li>
-            <li>Open-source UI icons and fonts</li>
-            <li>Team Dream2050 contributions</li>
-          </ul>
+          <h2 id="credits-title">Credits</h2>
+          <p class="section-lead" style="margin-top:8px; max-width:920px; margin-left:auto; margin-right:auto;">
+            Dream2050 is a concept and demonstration project created for the NASA Space Apps Challenge 2025. The demo highlights station systems, science operations, and crew workflows—compiled from public-domain resources, open-source tooling, and team contributions.
+          </p>
+
+          <div class="credits-grid" role="group" aria-labelledby="credits-title">
+            <div class="credits-column">
+              <h3>Project credits</h3>
+              <ul class="credits-list">
+                <li><strong>Imagery &amp; Data:</strong> NASA imagery, datasets, and public-domain resources used under their respective terms.</li>
+                <li><strong>Engine &amp; Tools:</strong> Unreal Engine 5 and standard development tooling used for the simulated experience.</li>
+                <li><strong>Design &amp; UI:</strong> Open-source icons and web fonts used for the site interface and UI mockups.</li>
+                <li><strong>Team:</strong> Team Dream2050 — concept, research, 3D/Unity/Unreal development, content, and testing.</li>
+              </ul>
+            </div>
+
+            <div class="references-column">
+              <h3>References</h3>
+              <p class="muted">Key resources used during research and development:</p>
+              <ul class="references-list">
+                <li><a href="https://data.nasa.gov/dataset/?q=International+Space+Station+&sort=score+desc%2C+metadata_modified+desc" target="_blank" rel="noopener">NASA Open Data Portal</a></li>
+                <li><a href="https://images.nasa.gov/search?q=international%20space%20station&page=1&media=image&yearStart=1920&yearEnd=2025" target="_blank" rel="noopener">NASA Image and Video Library</a></li>
+                <li><a href="https://www.nasa.gov/reference/international-space-station/" target="_blank" rel="noopener">International Space Station - NASA</a></li>
+                <li><a href="https://www.nasa.gov/exploration-research-and-technology/growing-plants-in-space/" target="_blank" rel="noopener">Growing Plants in Space - NASA</a></li>
+                <li><a href="https://www.nasa.gov/centers-and-facilities/armstrong/virtual-and-augmented-reality-techs/" target="_blank" rel="noopener">Virtual &amp; Augmented Reality Technologies - NASA</a></li>
+                <li><a href="https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/HOWTO-UIWorldSpace.html" target="_blank" rel="noopener">Unity — UI World Space (docs)</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </main>
