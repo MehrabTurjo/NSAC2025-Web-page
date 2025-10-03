@@ -92,7 +92,7 @@ html, body { overflow-x: hidden; }
   justify-items: center;
   overflow: hidden;
 }
-.hero-media { position: absolute; inset: 0; z-index: -2; }
+.hero-media { position: absolute; inset: 0; z-index: -1; }
 .hero-media picture,
 .hero-media img { width: 100%; height: 100%; display: block; }
 .hero-media img {
@@ -111,6 +111,9 @@ html, body { overflow-x: hidden; }
   background: radial-gradient(900px 360px at 50% 60%, rgba(6,10,16,0.45), rgba(6,8,12,0.75) 60%), linear-gradient(180deg, rgba(2,6,12,0.12), rgba(2,6,12,0.9));
   pointer-events: none;
 }
+
+/* Explore section video background */
+/* explore-bg video removed; keep styles tidy */
 
 /* CSS-only subtle starfield/particles */
 .hero-stars {
@@ -160,7 +163,7 @@ body::before {
   inset: 0;
   pointer-events: none;
   background: radial-gradient(1200px 500px at 50% 110%, rgba(0,0,0,0.65), rgba(0,0,0,0) 60%), linear-gradient(180deg, rgba(7,9,15,0.2), rgba(7,9,15,0.75));
-  z-index: -1;
+  z-index: -2;
 }
 
 @keyframes kenburns {

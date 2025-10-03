@@ -94,4 +94,6 @@
   // Removed old CTA toasts (buttons now navigate to pages)
 })();
 
+// Explore background video removed
+
 
