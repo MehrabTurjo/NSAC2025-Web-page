@@ -261,6 +261,49 @@ html, body { overflow-x: hidden; }
   }
 }
 
+/* Dynamic Space Station Elements */
+.space-elements {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.space-elements::before {
+  content: "🛰️";
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  font-size: 2rem;
+  opacity: 0.15;
+  animation: orbit-satellite 20s linear infinite;
+}
+
+.space-elements::after {
+  content: "🌍";
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  font-size: 3rem;
+  opacity: 0.1;
+  animation: earth-rotation 30s linear infinite;
+}
+
+@keyframes orbit-satellite {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); }
+  25% { transform: translateX(50px) translateY(-30px) rotate(90deg); }
+  50% { transform: translateX(100px) translateY(0) rotate(180deg); }
+  75% { transform: translateX(50px) translateY(30px) rotate(270deg); }
+  100% { transform: translateX(0) translateY(0) rotate(360deg); }
+}
+
+@keyframes earth-rotation {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
 /* Add floating particles to sections */
 .section::after {
   content: "";
@@ -278,6 +321,89 @@ html, body { overflow-x: hidden; }
 @keyframes section-particles {
   0% { transform: translateY(0) rotate(0deg); }
   100% { transform: translateY(-20px) rotate(360deg); }
+}
+
+/* Orbital Path Animation */
+.orbital-path {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 2px dashed rgba(122,162,247,0.1);
+  border-radius: 50%;
+  top: 10%;
+  right: 15%;
+  animation: orbital-glow 8s ease-in-out infinite;
+}
+
+@keyframes orbital-glow {
+  0%, 100% { 
+    border-color: rgba(122,162,247,0.05);
+    transform: scale(1); 
+  }
+  50% { 
+    border-color: rgba(122,162,247,0.15);
+    transform: scale(1.05); 
+  }
+}
+
+/* Space Station Module Icons */
+.space-modules {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.space-modules .module {
+  position: absolute;
+  font-size: 1.8rem;
+  opacity: 0.12;
+  animation: module-float 15s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.space-modules .module:nth-child(1) {
+  top: 25%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.space-modules .module:nth-child(2) {
+  top: 55%;
+  right: 15%;
+  animation-delay: 5s;
+}
+
+.space-modules .module:nth-child(3) {
+  bottom: 35%;
+  left: 20%;
+  animation-delay: 10s;
+}
+
+@keyframes module-float {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.08;
+  }
+  33% {
+    transform: translateY(-30px) rotate(120deg);
+    opacity: 0.15;
+  }
+  66% {
+    transform: translateY(-15px) rotate(240deg);
+    opacity: 0.12;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .space-elements::before,
+  .space-elements::after,
+  .orbital-path,
+  .space-modules .module,
+  .hero-stars {
+    animation: none;
+  }
 }
 
 /* Demo Section Styling for Sub-pages */
@@ -412,7 +538,7 @@ body::before {
   margin: 0 0 6px;
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-weight: 700;
-  font-size: clamp(40px, 8vw, 96px);
+  font-size: clamp(28px, 5vw, 64px);
   letter-spacing: -1px;
   text-shadow: 0 4px 28px rgba(0,0,0,0.6), 0 1px 0 rgba(0,0,0,0.4);
 }
@@ -441,26 +567,16 @@ body::before {
 
 /* Mission Section */
 .mission-section {
-  background: linear-gradient(135deg, rgba(7,9,15,0.95), rgba(12,17,26,0.9));
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-.mission-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(1200px 400px at 20% 50%, rgba(122,162,247,0.15), transparent 50%), 
-              radial-gradient(800px 300px at 80% 20%, rgba(79,182,168,0.1), transparent 50%);
-  pointer-events: none;
+  padding: 120px 0;
+  position: relative;
 }
 
 .mission-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin-top: 60px;
-  max-width: 900px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -516,6 +632,8 @@ body::before {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .tech-section::before {
@@ -525,6 +643,24 @@ body::before {
   background: radial-gradient(1000px 500px at 70% 30%, rgba(79,182,168,0.12), transparent 60%),
               radial-gradient(600px 400px at 30% 70%, rgba(122,162,247,0.08), transparent 50%);
   pointer-events: none;
+}
+
+/* Add grid pattern for tech theme */
+.tech-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(122,162,247,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(122,162,247,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: tech-grid-pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes tech-grid-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
 }
 
 .tech-grid {
@@ -1121,7 +1257,7 @@ section[aria-labelledby="credits-title"] .section-lead { text-align: center; }
   .cta-group { gap: 10px; }
   .section { padding: 80px 0; }
   .mission-section, .tech-section { min-height: auto; padding: 80px 0; }
-  .mission-stats { grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
+  .mission-stats { grid-template-columns: 1fr; gap: 25px; margin-top: 40px; max-width: 400px; }
   .stat-item { padding: 20px 15px; }
   .stat-number { font-size: 2.5rem; }
   .tech-grid { grid-template-columns: 1fr; gap: 30px; margin-top: 40px; }
